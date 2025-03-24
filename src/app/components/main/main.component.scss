@@ -1,0 +1,177 @@
+@import "../../../styles.scss";
+
+// Hero section
+.hero-section {
+  @include flex-center;
+  height: 400px;
+  .hero-section-wrapper {
+    width: 40%;
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    .title {
+      font-size: $font-size-bigger;
+      font-weight: $font-weight-bolder;
+      color: $color-black;
+    }
+    .sub-title {
+      line-height: 36px;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-light;
+      color: $color-grey;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    .hero-section-wrapper {
+      .title {
+        font-size: $font-size-big;
+      }
+    }
+  }
+}
+
+// Gallery section
+.gallery-section {
+  @include flex-center;
+  .gallery-section-wrapper {
+    @include flex-center;
+    width: 90%;
+    gap: 100px 40px;
+    flex-wrap: wrap;
+    .card {
+      border-radius: 8px;
+      flex: 1 1 calc(50% - 100px);
+      gap: 20px;
+      @include flex-center;
+      flex-direction: column;
+      gap: 30px;
+      align-items: flex-start;
+      .title {
+        line-height: 44px;
+        font-size: $font-size-big;
+        font-weight: $font-weight-bold;
+      }
+      .sub-title {
+        width: 80%;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-light;
+        color: $color-grey;
+      }
+    }
+    .card2,
+    .card3 {
+      img {
+        border-radius: 8px;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .card1,
+    .card4 {
+      width: 80%;
+    }
+    .card4 {
+      @include flex-center;
+      .title,
+      .sub-title,
+      button {
+        margin: 0px 100px;
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-section {
+    .gallery-section-wrapper {
+      .card {
+        flex: 1 1 calc(100% - 100px);
+      }
+    }
+  }
+}
+
+// Details section
+.details-section {
+  @include flex-center;
+  padding: 100px 0px;
+  .details-section-wrapper {
+    width: 90%;
+    .details-section-head {
+      font-size: $font-size-big;
+      font-weight: $font-weight-bold;
+      color: $color-black;
+    }
+    .details-section-body {
+      padding: 50px 0px;
+      @include flex-center;
+      gap: 50px;
+      flex-wrap: wrap;
+      .card {
+        flex: 1 1 calc(50% - 100px);
+        @include flex-center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        .title {
+          font-size: $font-size-medium;
+          font-weight: $font-weight-light;
+          color: $color-black;
+        }
+        .desc {
+          width: 80%;
+          font-size: $font-size-normal;
+          font-weight: $font-weight-normal;
+          color: $color-grey;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .details-section {
+    .details-section-wrapper {
+      .details-section-body {
+        .card {
+          flex: 1 1 calc(100% - 100px);
+          .desc {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Sub hero section
+.sub-hero-section {
+  @include flex-center;
+  height: 400px;
+  background-color: $color-gb-grey;
+  .sub-hero-section-wrapper {
+    width: 40%;
+    @include flex-center;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    .title {
+      font-size: $font-size-big;
+      font-weight: $font-weight-bold;
+      color: $color-black;
+    }
+    .sub-title {
+      line-height: 36px;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-light;
+      color: $color-grey;
+    }
+  }
+}

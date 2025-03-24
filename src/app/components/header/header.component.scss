@@ -1,0 +1,47 @@
+@import "../../../styles.scss";
+
+// Header
+header {
+  @include flex-center;
+  height: 164px;
+  .header-wrapper {
+    width: 90%;
+    @include flex-center;
+    justify-content: space-between;
+    height: 164px;
+    .menu-icon {
+      display: none;
+      @include pointer-hover;
+    }
+    .brand-name {
+      font-size: $font-size-normal;
+      font-weight: $font-weight-normal;
+      color: $color-black;
+      @include pointer-hover;
+    }
+    .nav-wrapper {
+      @include flex-center;
+      height: 164px;
+      gap: 50px;
+      .nav-menu {
+        font-size: $font-size-normal;
+        font-weight: $font-weight-normal;
+        color: $color-black;
+        @include pointer-hover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    .header-wrapper {
+      .menu-icon {
+        display: block;
+      }
+      .nav-wrapper {
+        display: none;
+      }
+    }
+  }
+}

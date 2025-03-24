@@ -1,0 +1,61 @@
+@import "../../../styles.scss";
+
+// footer
+footer {
+  @include flex-center;
+  padding: 50px 0px;
+  .footer-section {
+    width: 90%;
+    .footer-section-wrapper {
+      @include flex-center;
+      gap: 50px;
+      .card {
+        flex: 1 1 calc(25% - 100px);
+        .card-item {
+          font-size: $font-size-small;
+          font-weight: $font-weight-normal;
+          color: $color-black;
+          margin: 40px 0px;
+          @include pointer-hover;
+        }
+        .card-header {
+          font-size: $font-size-medium;
+          font-weight: $font-weight-light;
+          color: $color-black;
+          @include pointer-hover;
+        }
+        .card-footer {
+          @include flex-center;
+          gap: 25px;
+          img {
+            @include pointer-hover;
+          }
+        }
+      }
+      .card1 {
+        height: 240px;
+        @include flex-center;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        flex: 1 1 calc(50% - 100px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    .footer-section {
+      .footer-section-wrapper {
+        flex-wrap: wrap;
+        .card {
+          flex: 1 1 calc(50% - 100px);
+        }
+        .card1 {
+          flex: 1 1 calc(50% - 100px);
+        }
+      }
+    }
+  }
+}
